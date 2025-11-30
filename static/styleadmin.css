@@ -1,0 +1,101 @@
+/* ------------------------------------------------
+   GLOBAL
+---------------------------------------------------*/
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #f4f6fb;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* ------------------------------------------------
+   TABLE
+---------------------------------------------------*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead tr {
+    background: #1e293b;
+    color: white;
+}
+
+th, td {
+    padding: 14px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+tbody tr:hover {
+    background: #f1f5f9;
+    transition: 0.2s;
+}
+
+/* ------------------------------------------------
+   BUTTON / LINKS
+---------------------------------------------------*/
+a {
+    text-decoration: none;
+}
+
+a.btn-approve {
+    padding: 8px 14px;
+    background: #16a34a;
+    color: white;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+a.btn-approve:hover {
+    background: #15803d;
+}
+
+a.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 18px;
+    background: #475569;
+    color: white;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+a.back-btn:hover {
+    background: #334155;
+}
+
+/* ------------------------------------------------
+   RESPONSIVE
+---------------------------------------------------*/
+@media (max-width: 768px) {
+    table, th, td {
+        font-size: 13px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}

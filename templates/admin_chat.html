@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat Moderation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>Chat Moderation</h2>
+    <ul>
+        {% for chat in chats %}
+            <li>{{ chat.sender }} → {{ chat.receiver }}: {{ chat.message }}
+                <a href="/admin/chat/report/{{ chat.id }}">Report</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/admin">Back to Dashboard</a>
+</div>
+</body>
+</html>

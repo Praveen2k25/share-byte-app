@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Claims Monitoring</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>All Claims</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Claimant</th>
+                <th>Listing</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for claim in claims %}
+            <tr>
+                <td>{{ claim.id }}</td>
+                <td>{{ claim.user_name }}</td>
+                <td>{{ claim.listing_name }}</td>
+                <td>{{ claim.status }}</td>
+                <td>
+                    {% if claim.status != 'Approved' %}
+                        <a href="/admin/claims/approve/{{ claim.id }}">Approve</a>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/admin">Back to Dashboard</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Volunteer Chat</title>
+    <link rel="stylesheet" href="../static//stylevolunteer.css">
+</head>
+<body>
+<div class="container">
+    <h2>Chat</h2>
+    <p>Chat with NGO, Donor, or Recipient</p>
+    <div class="chat-box">
+        {% for msg in messages %}
+            <p><strong>{{ msg.sender }}:</strong> {{ msg.text }}</p>
+        {% endfor %}
+    </div>
+    <form method="post">
+        <input type="text" name="message" placeholder="Type your message..." required>
+        <button type="submit">Send</button>
+    </form>
+</div>
+</body>
+</html>

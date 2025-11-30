@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>Welcome, Admin {{ username }}</h2>
+    <ul>
+        <li><a href="/admin/users">User Approvals</a></li>
+        <li><a href="/admin/listings">Monitor Listings</a></li>
+        <li><a href="/admin/claims">Monitor Claims</a></li>
+        <li><a href="/admin/chat">Chat Moderation</a></li>
+        <li><a href="/admin/analytics">Analytics</a></li>
+        <li><a href="/admin/notifications">Broadcast Notifications</a></li>
+        <li><a href="/admin/logout">Logout</a></li>
+    </ul>
+</div>
+</body>
+</html>

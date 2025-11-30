@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="../static/stylerecipient.css">
+<head><title>Recipient Profile</title></head>
+<body>
+<h2>Profile</h2>
+<form method="post">
+    Full Name: <input type="text" name="full_name" value="{{ profile[2] if profile else '' }}"><br>
+    Address: <input type="text" name="address" value="{{ profile[3] if profile else '' }}"><br>
+    Phone: <input type="text" name="phone" value="{{ profile[4] if profile else '' }}"><br>
+    <button type="submit">Update Profile</button>
+</form>
+<a href="/recipient">Back to Dashboard</a>
+</body>
+</html>

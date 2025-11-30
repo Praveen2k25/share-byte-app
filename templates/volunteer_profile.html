@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Volunteer Profile</title>
+    <link rel="stylesheet" href="../static//stylevolunteer.css">
+</head>
+<body>
+<div class="container">
+    <h2>My Profile</h2>
+    <form method="post">
+        <input type="text" name="full_name" placeholder="Full Name" value="{{ profile.full_name if profile else '' }}" required>
+        <input type="email" name="contact_email" placeholder="Email" value="{{ profile.contact_email if profile else '' }}" required>
+        <input type="text" name="phone" placeholder="Phone" value="{{ profile.phone if profile else '' }}" required>
+        <textarea name="address" placeholder="Address">{{ profile.address if profile else '' }}</textarea>
+        <button type="submit">Update Profile</button>
+    </form>
+</div>
+</body>
+</html>

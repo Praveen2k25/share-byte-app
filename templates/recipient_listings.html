@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="../static/stylerecipient.css">
+<head><title>Listings</title></head>
+<body>
+<h2>Available Food Listings</h2>
+<ul>
+{% for l in listings %}
+    <li>
+        {{ l[2] }} ({{ l[5] }}) - <a href="/recipient/listings/{{ l[0] }}">View Details</a>
+    </li>
+{% else %}
+    <li>No listings found</li>
+{% endfor %}
+</ul>
+<a href="/recipient">Back to Dashboard</a>
+</body>
+</html>

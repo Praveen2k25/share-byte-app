@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>Signup</h2>
+    {% if error %}<p class="error">{{ error }}</p>{% endif %}
+    <form method="post">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <select name="role" required>
+            <option value="">Select Role</option>
+            <option value="admin">Admin</option>
+            <option value="Donor">Donor</option>
+            <option value="Recipient">Recipient</option>
+            <option value="NGO">NGO</option>
+            <option value="Volunteer">Volunteer</option>
+        </select>
+        <button type="submit">Signup</button>
+    </form>
+    <p>Already have an account? <a href="/login">Login</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NGO Volunteers</title>
+    <link rel="stylesheet" href="../static/stylengo.css">
+</head>
+<body>
+    <h2>Assign Volunteers</h2>
+    <form method="post">
+        <input type="number" name="volunteer_id" placeholder="Volunteer User ID" required>
+        <textarea name="task_description" placeholder="Task Description" required></textarea>
+        <button type="submit">Assign</button>
+    </form>
+
+    <h3>Current Assignments</h3>
+    <table border="1">
+        <tr>
+            <th>Volunteer ID</th>
+            <th>Task</th>
+            <th>Status</th>
+        </tr>
+        {% for v in volunteers %}
+        <tr>
+            <td>{{ v[2] }}</td>
+            <td>{{ v[3] }}</td>
+            <td>{{ v[4] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/ngo">Back to Dashboard</a>
+</body>
+</html>

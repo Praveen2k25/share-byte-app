@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NGO Notifications</title>
+    <link rel="stylesheet" href="../static/stylengo.css">
+</head>
+<body>
+    <h2>Notifications</h2>
+    <ul>
+        {% for note in notifications %}
+        <li>
+            {{ note[2] }} - {{ note[4] }}
+            {% if note[3] == False %}(Unread){% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="/ngo">Back to Dashboard</a>
+</body>
+</html>

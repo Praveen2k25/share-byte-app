@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Claim Requests</title>
+    <style>
+        body { font-family: Arial; background:#f7f9fc; padding:20px;}
+        h2 { color:#34495e; }
+        table { width:100%; border-collapse:collapse; margin-top:20px; }
+        th, td { border:1px solid #ccc; padding:10px; text-align:left; }
+        th { background:#2c3e50; color:white; }
+        a.button { background:#1abc9c; color:white; padding:5px 10px; text-decoration:none; border-radius:4px; }
+        a.button:hover { background:#16a085; }
+    </style>
+</head>
+<body>
+    <h2>Claim Requests</h2>
+    <table>
+        <tr>
+            <th>Listing</th>
+            <th>Requester</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+        {% for claim in claims %}
+        <tr>
+            <td>{{ claim.listing_title }}</td>
+            <td>{{ claim.requester_name }}</td>
+            <td>{{ claim.status }}</td>
+            <td>
+                <a class="button" href="/donor/claim/{{ claim.id }}/accept">Accept</a>
+                <a class="button" href="/donor/claim/{{ claim.id }}/reject">Reject</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NGO Claims</title>
+    <link rel="stylesheet" href="../static/stylengo.css">
+</head>
+<body>
+    <h2>My Claims</h2>
+    <table border="1">
+        <tr>
+            <th>Listing</th>
+            <th>Quantity</th>
+            <th>Status</th>
+        </tr>
+        {% for claim in claims %}
+        <tr>
+            <td>{{ claim[1] }}</td>
+            <td>{{ claim[2] }}</td>
+            <td>{{ claim[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/ngo">Back to Dashboard</a>
+</body>
+</html>

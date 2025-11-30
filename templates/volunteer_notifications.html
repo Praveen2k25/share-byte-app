@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Volunteer Notifications</title>
+    <link rel="stylesheet" href="../static//stylevolunteer.css">
+</head>
+<body>
+<div class="container">
+    <h2>Notifications</h2>
+    {% if notifications %}
+    <ul>
+        {% for n in notifications %}
+        <li>
+            {{ n.message }} - {{ n.created_at }}
+            {% if not n.is_read %}
+                <strong>(New)</strong>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No notifications.</p>
+    {% endif %}
+</div>
+</body>
+</html>

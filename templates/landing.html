@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background: #333;
+            padding: 15px;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 60px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            font-size: 18px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 20px;
+            background: #ff4c4c;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        a:hover {
+            background: #e60000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        Welcome to Your Dashboard
+    </div>
+
+    <div class="container">
+        <h1>Hello, {{ username }} 👋</h1>
+        <p>Your role: <strong>{{ role }}</strong></p>
+
+        <p>Login Successful! You are now on your landing page.</p>
+
+        <a href="/logout">Logout</a>
+    </div>
+
+</body>
+</html>

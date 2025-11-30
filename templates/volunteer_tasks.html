@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Volunteer Tasks</title>
+    <link rel="stylesheet" href="../static//stylevolunteer.css">
+</head>
+<body>
+<div class="container">
+    <h2>My Tasks</h2>
+    {% if tasks %}
+    <table>
+        <tr>
+            <th>Task ID</th>
+            <th>Donor</th>
+            <th>NGO</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+        {% for t in tasks %}
+        <tr>
+            <td>{{ t.id }}</td>
+            <td>{{ t.donor_name }}</td>
+            <td>{{ t.ngo_name }}</td>
+            <td>{{ t.task_description }}</td>
+            <td>{{ t.status }}</td>
+            <td>
+                <a href="/volunteer/task/{{ t.id }}/accept">Accept</a> |
+                <a href="/volunteer/task/{{ t.id }}/reject">Reject</a> |
+                <a href="/volunteer/task/{{ t.id }}/update">Update Status</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>No tasks assigned yet.</p>
+    {% endif %}
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NGO Profile</title>
+    <link rel="stylesheet" href="../static/stylengo.css">
+</head>
+<body>
+    <h2>Update NGO Profile</h2>
+    <form method="post">
+        <input type="text" name="ngo_name" placeholder="NGO Name" value="{{ profile[1] if profile else '' }}" required>
+        <textarea name="address" placeholder="Address">{{ profile[2] if profile else '' }}</textarea>
+        <input type="email" name="contact_email" placeholder="Email" value="{{ profile[3] if profile else '' }}" required>
+        <input type="text" name="phone" placeholder="Phone" value="{{ profile[4] if profile else '' }}" required>
+        <input type="text" name="registration_document" placeholder="Document Path" value="{{ profile[5] if profile else '' }}">
+        <button type="submit">Update Profile</button>
+    </form>
+    <a href="/ngo">Back to Dashboard</a>
+</body>
+</html>

@@ -1,0 +1,161 @@
+/* ============================================================
+   GLOBAL RESET & BASE STYLES
+   ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #eef1f7;
+    padding: 30px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ============================================================
+   HEADINGS
+   ============================================================ */
+h1, h2, h3 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+/* ============================================================
+   LINKS
+   ============================================================ */
+a {
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+/* ============================================================
+   NAVIGATION LISTS / DASHBOARD MENU
+   ============================================================ */
+ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+ul li {
+    margin: 12px 0;
+}
+
+ul li a {
+    padding: 12px 18px;
+    background: #fff;
+    border-radius: 8px;
+    display: inline-block;
+    border: 1px solid #d1d5db;
+    width: 250px;
+    transition: 0.25s ease;
+    font-size: 15px;
+}
+
+ul li a:hover {
+    background: #2563eb;
+    color: #fff;
+    border-color: #2563eb;
+}
+
+/* ============================================================
+   FORM STYLES
+   ============================================================ */
+form {
+    background: #fff;
+    padding: 24px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    max-width: 650px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    font-size: 15px;
+    transition: border-color 0.2s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #2563eb;
+    outline: none;
+}
+
+button {
+    padding: 12px 18px;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+/* ============================================================
+   TABLE STYLES
+   ============================================================ */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+}
+
+table th, table td {
+    padding: 14px 12px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+    font-size: 14px;
+}
+
+table th {
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+}
+
+table tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+/* ============================================================
+   PAGE CONTAINERS
+   ============================================================ */
+.container {
+    background: #fff;
+    padding: 24px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    max-width: 900px;
+}
+
+/* ============================================================
+   UTILITY CLASSES
+   ============================================================ */
+.mt-20 { margin-top: 20px; }
+.mb-20 { margin-bottom: 20px; }
+.center { text-align: center; }

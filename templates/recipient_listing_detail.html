@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="../static/stylerecipient.css">
+<head><title>Listing Detail</title></head>
+<body>
+<h2>{{ listing[2] }}</h2>
+<p>Description: {{ listing[3] }}</p>
+<p>Quantity: {{ listing[4] }}</p>
+<p>Type: {{ listing[5] }}</p>
+<p>Status: {{ listing[6] }}</p>
+<p>Pickup Location: {{ listing[7] }}</p>
+<p>Pickup Time: {{ listing[8] }}</p>
+<form method="post">
+    <button type="submit">Claim this Food</button>
+</form>
+<a href="/recipient/listings">Back to Listings</a>
+</body>
+</html>

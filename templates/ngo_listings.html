@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NGO Listings</title>
+    <link rel="stylesheet" href="../static/stylengo.css">
+</head>
+<body>
+    <h2>All Food Listings</h2>
+    <table border="1">
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Type</th>
+            <th>Pickup Location</th>
+            <th>Pickup Time</th>
+            <th>Action</th>
+        </tr>
+        {% for listing in listings %}
+        <tr>
+            <td>{{ listing[2] }}</td>
+            <td>{{ listing[3] }}</td>
+            <td>{{ listing[4] }}</td>
+            <td>{{ listing[5] }}</td>
+            <td>{{ listing[7] }}</td>
+            <td>{{ listing[6] }}</td>
+            <td><a href="/ngo/claims/{{ listing[0] }}">Claim</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/ngo">Back to Dashboard</a>
+</body>
+</html>

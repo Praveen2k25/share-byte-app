@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Claim Listing</title>
+    <link rel="stylesheet" href="../static/stylengo.css">
+</head>
+<body>
+    <h2>Claim Listing: {{ listing[2] }}</h2>
+    <p>{{ listing[3] }}</p>
+    <p>Available Quantity: {{ listing[4] }}</p>
+    <form method="post">
+        <input type="number" name="quantity_claimed" placeholder="Quantity to claim" max="{{ listing[4] }}" required>
+        <button type="submit">Submit Claim</button>
+    </form>
+    <a href="/ngo/listings">Back to Listings</a>
+</body>
+</html>

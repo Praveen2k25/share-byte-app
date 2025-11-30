@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Food Listing</title>
+    <style>
+        body { font-family: Arial; background:#f7f9fc; }
+        .container { max-width:600px; margin:50px auto; background:white; padding:30px; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.1);}
+        h2 { text-align:center; color:#34495e; }
+        form { display:flex; flex-direction:column; }
+        label { margin-top:15px; font-weight:bold; }
+        input, select, textarea { margin-top:5px; padding:10px; border-radius:6px; border:1px solid #ccc; }
+        button { margin-top:20px; padding:12px; background:#1abc9c; color:white; border:none; border-radius:6px; cursor:pointer; }
+        button:hover { background:#16a085; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Create Food Listing</h2>
+        <form action="/donor/create-listing" method="POST" enctype="multipart/form-data">
+            <label for="title">Food Title</label>
+            <input type="text" name="title" id="title" required>
+
+            <label for="description">Description</label>
+            <textarea name="description" id="description" rows="3" placeholder="Optional"></textarea>
+
+            <label for="quantity">Quantity</label>
+            <input type="text" name="quantity" id="quantity" placeholder="e.g., 5 plates, 2 kg" required>
+
+            <label for="food_type">Food Type</label>
+            <select name="food_type" id="food_type" required>
+                <option value="">Select Type</option>
+                <option value="Vegetables">Vegetables</option>
+                <option value="Fruits">Fruits</option>
+                <option value="Snacks">Snacks</option>
+                <option value="Meals">Meals</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="cooked_status">Cooked / Non-Cooked</label>
+            <select name="cooked_status" id="cooked_status" required>
+                <option value="">Select Status</option>
+                <option value="cooked">Cooked</option>
+                <option value="non-cooked">Non-Cooked</option>
+            </select>
+
+            <label for="pickup_location">Pickup Location</label>
+            <input type="text" name="pickup_location" id="pickup_location" required>
+
+            <label for="pickup_time">Time to Collect</label>
+            <input type="datetime-local" name="pickup_time" id="pickup_time" required>
+
+            <label for="image">Food Image</label>
+            <input type="file" name="image" id="image" accept="image/*">
+
+            <button type="submit">Create Listing</button>
+        </form>
+    </div>
+</body>
+</html>

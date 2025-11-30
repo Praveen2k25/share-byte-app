@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="../static/stylerecipient.css">
+<head><title>My Claims</title></head>
+<body>
+<h2>My Claims</h2>
+<ul>
+{% for c in claims %}
+    <li>{{ c[1] }} - Status: {{ c[2] }}
+        {% if c[2] != 'Cancelled' %}<a href="/recipient/claims/cancel/{{ c[0] }}">Cancel</a>{% endif %}
+    </li>
+{% else %}
+    <li>No claims found</li>
+{% endfor %}
+</ul>
+<a href="/recipient">Back to Dashboard</a>
+</body>
+</html>

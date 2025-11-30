@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="../static/stylerecipient.css">
+<head><title>Notifications</title></head>
+<body>
+<h2>Notifications</h2>
+<ul>
+{% for n in notifications %}
+    <li>{{ n[2] }} - {{ n[4] }}</li>
+{% else %}
+    <li>No notifications</li>
+{% endfor %}
+</ul>
+<a href="/recipient">Back to Dashboard</a>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Volunteer Dashboard</title>
+    <link rel="stylesheet" href="../static//stylevolunteer.css">
+</head>
+<body>
+<div class="container">
+    <h2>Welcome, {{ username }}</h2>
+    <p>Role: {{ role }}</p>
+
+    <ul class="nav">
+        <li><a href="/volunteer/tasks">My Tasks</a></li>
+        <li><a href="/volunteer/profile">Profile</a></li>
+        <li><a href="/volunteer/notifications">Notifications</a></li>
+        <li><a href="/volunteer/chat">Chat</a></li>
+        <li><a href="/logout">Logout</a></li>
+    </ul>
+</div>
+</body>
+</html>

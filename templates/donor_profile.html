@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <style>
+        body { font-family: Arial; background:#f7f9fc; }
+        .container { max-width:500px; margin:50px auto; background:white; padding:30px; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.1);}
+        h2 { text-align:center; color:#34495e; }
+        label { display:block; margin-top:15px; font-weight:bold; }
+        input { width:100%; padding:10px; margin-top:5px; border-radius:6px; border:1px solid #ccc; }
+        button { margin-top:20px; padding:12px; background:#1abc9c; color:white; border:none; border-radius:6px; cursor:pointer; }
+        button:hover { background:#16a085; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Update Profile</h2>
+        <form action="/donor/profile" method="POST" enctype="multipart/form-data">
+            <label for="full_name">Full Name</label>
+            <input type="text" name="full_name" id="full_name" value="{{ profile.full_name if profile else '' }}" required>
+
+            <label for="address">Address</label>
+            <input type="text" name="address" id="address" value="{{ profile.address if profile else '' }}" required>
+
+            <label for="document">Upload Document (optional)</label>
+            <input type="file" name="document" id="document">
+
+            <button type="submit">Update Profile</button>
+        </form>
+    </div>
+</body>
+</html>

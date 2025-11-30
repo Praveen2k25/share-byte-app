@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monitor Listings</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>All Listings</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Donor</th>
+                <th>Food Type</th>
+                <th>Quantity</th>
+                <th>Expiry</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for listing in listings %}
+            <tr>
+                <td>{{ listing.id }}</td>
+                <td>{{ listing.donor_name }}</td>
+                <td>{{ listing.food_type }}</td>
+                <td>{{ listing.quantity }}</td>
+                <td>{{ listing.expiry_date }}</td>
+                <td><a href="/admin/listings/remove/{{ listing.id }}">Remove</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/admin">Back to Dashboard</a>
+</div>
+</body>
+</html>

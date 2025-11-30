@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analytics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>Analytics</h2>
+    <ul>
+        <li>Total Meals Saved: {{ analytics.meals_saved }}</li>
+        <li>Total Food Donated: {{ analytics.total_food_donated }}</li>
+        <li>Donation Heat Map: <!-- Map can be integrated here --></li>
+    </ul>
+    <a href="/admin">Back to Dashboard</a>
+</div>
+</body>
+</html>

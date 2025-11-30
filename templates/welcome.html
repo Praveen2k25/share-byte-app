@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 35px;
+            width: 380px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        a {
+            display: inline-block;
+            background: #ff4c4c;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            background: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Welcome, {{ session['username'] }}! 🎉</h1>
+        <h3>Your Role: <strong>{{ session['role'] }}</strong></h3>
+        
+        <a href="/logout">Logout</a>
+    </div>
+
+</body>
+</html>
