@@ -1,5 +1,5 @@
 from flask import Flask, request, redirect, render_template, session, url_for, flash
-import psycopg2
+import psycopg
 from werkzeug.security import generate_password_hash, check_password_hash
 from werkzeug.utils import secure_filename
 import os
@@ -18,13 +18,15 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # PostgreSQL connection using .env variables
-conn = psycopg2.connect(
+# Connection
+conn = psycopg.connect(
     host=os.getenv("DB_HOST"),
-    database=os.getenv("DB_NAME"),
+    dbname=os.getenv("DB_NAME"),
     user=os.getenv("DB_USER"),
     password=os.getenv("DB_PASSWORD"),
     port=os.getenv("DB_PORT")
 )
+
 cur = conn.cursor()
 
 
